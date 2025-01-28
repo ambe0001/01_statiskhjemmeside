@@ -1,0 +1,34 @@
+/*************************************Reset*******************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  align-self: stretch;
+  object-fit: cover;
+}
+
+/********* Grids ********/
+.category_list_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.category_list_container a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: gray;
+  border-radius: 5px;
+  text-align: center;
+}
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
