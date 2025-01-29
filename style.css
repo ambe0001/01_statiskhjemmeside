@@ -13,13 +13,14 @@ img {
   object-fit: cover;
 }
 
-/********* Grids ********/
+/******************* Grids ******************/
 .category_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
 .category_list_container a {
+  margin-inline: 2rem;
   color: aliceblue;
   text-decoration: none;
   font-size: 2rem;
@@ -27,6 +28,17 @@ img {
   border-radius: 5px;
   text-align: center;
 }
+
+h1 {
+  margin-block: 2rem;
+  margin-left: 2rem;
+}
+
+h2 {
+  margin-block: 2rem;
+  margin-left: 2rem;
+}
+
 .grid_1-1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
