@@ -13,22 +13,44 @@ img {
   object-fit: cover;
 }
 
-/********* Grids ********/
+/******************* Grids ******************/
 .category_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+  margin-top: 2rem;
 }
 .category_list_container a {
-  color: aliceblue;
+  color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-family: "Roboto Serif", serif;
   background-color: gray;
-  border-radius: 5px;
+  border-radius: 6px;
   text-align: center;
+  padding: 4rem;
+  margin-inline: 2rem;
+  font-size: 30px;
 }
+
 .grid_1-1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
+}
+
+/*********** overskrifter ********/
+h1 {
+  margin-block: 2rem;
+  margin-left: 2rem;
+  font-family: "Roboto";
+  font-size: 60px;
+  color: black;
+}
+
+h2 {
+  margin-top: 5rem;
+  margin-left: 2rem;
+  font-family: "Roboto";
+  font-size: 40px;
+  font-weight: 500;
 }
