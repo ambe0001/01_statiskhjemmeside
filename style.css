@@ -32,6 +32,13 @@ img {
   font-size: 30px;
 }
 
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+/*********** overskrifter ********/
 h1 {
   margin-block: 2rem;
   margin-left: 2rem;
@@ -46,10 +53,4 @@ h2 {
   font-family: "Roboto";
   font-size: 40px;
   font-weight: 500;
-}
-
-.grid_1-1-1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 2rem;
 }
