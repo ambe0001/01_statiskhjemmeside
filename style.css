@@ -30,6 +30,7 @@ img {
 a {
   color: black;
   font-family: "Roboto Serif", serif;
+  margin-bottom: 1rem;
 }
 
 /***************** overskrifter og tekst ********************/
@@ -49,6 +50,7 @@ h2 {
 }
 h3 {
   font-family: "Roboto Serif";
+  margin-top: 1rem;
 }
 
 h4 {
@@ -62,6 +64,47 @@ p {
 
 .fashionrus {
   text-decoration: none;
+}
+
+/********** produkt siden  **********/
+
+.produktinfo {
+  margin: 0rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.specifik {
+  margin-top: 3rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.produktfoto {
+  padding-right: 2rem;
+  margin-left: 1rem;
+}
+.marginleft {
+  margin-left: 1rem;
+}
+.kurv {
+  background-color: gray;
+  margin-right: 1rem;
+  padding-left: 1rem;
+  border-radius: 5px;
+  margin-left: 1rem;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  padding-block: 1rem;
+}
+.nummer {
+  margin-bottom: 2rem;
+}
+.tilføjkurv {
+  margin-top: 3rem;
 }
 
 /*********** udsolgt og rabat **********************/
@@ -110,6 +153,27 @@ p {
   }
 }
 
+@media (min-width: 800px) and (max-width: 1200px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .kurv {
+    padding-block: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
 @media (min-width: 600px) and (max-width: 900px) {
   .produkt_liste_container {
     display: grid;
@@ -122,7 +186,8 @@ p {
 }
 
 @media (max-width: 600px) {
-  .produkt_liste_container {
+  .produkt_liste_container,
+  .produktfoto {
     margin-inline: 1rem;
   }
 }
