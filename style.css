@@ -94,7 +94,7 @@ p {
   background-color: gray;
   margin-right: 1rem;
   padding-left: 1rem;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-left: 1rem;
   padding-right: 2rem;
   margin-bottom: 1rem;
@@ -105,6 +105,12 @@ p {
 }
 .tilføjkurv {
   margin-top: 3rem;
+  color: black;
+  text-decoration: none;
+  font-family: "Roboto Serif", serif;
+  background-color: white;
+  border-radius: 50px;
+  padding: 2rem;
 }
 
 /*********** udsolgt og rabat **********************/
@@ -154,7 +160,7 @@ p {
 }
 
 @media (min-width: 800px) and (max-width: 1200px) {
-  .grid_1-1-1 {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -166,7 +172,7 @@ p {
 }
 
 @media (min-width: 1200px) {
-  .grid_1-1-1 {
+  .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
