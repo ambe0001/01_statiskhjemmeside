@@ -20,7 +20,7 @@ function showList(data) {
                 <h3>${product.productdisplayname}</h3>
                 <h4>${product.articletype}|${product.brandname}</h4>
                 <p>${product.price},-</p>
-                <a href="produkt.html">Read more</a>
+                <a href="produkt.html?id=${product.id}">Read more</a>
             </div>`
     )
     .join("");
