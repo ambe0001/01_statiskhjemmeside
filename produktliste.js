@@ -2,17 +2,18 @@ console.log("script loaded...");
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const mycategory = urlParams.get("categories");
+const mycategory = urlParams.get("category");
 
 console.log("The category is:", mycategory);
 
-let listContainer = document.querySelector(".produkt_liste_container");
+const listContainer = document.querySelector(".produkt_liste_container");
 fetch(`https://kea-alt-del.dk/t7/api/products?category=${mycategory}`)
   .then((response) => response.json())
   .then((data) => showList(data));
 
 function showList(data) {
   const markup = data
+
     .map(
       (product) =>
         ` <div class="card">
