@@ -25,7 +25,16 @@ function showProduct(data) {
                 <div>
                     <h3 class="specifik marginleft">Inventory number</h3>
                     <p class="marginleft nummer">${data.id}</p>
+                </div>     
+          
+ <div class="rabat ${data.discount && "rabat_fr"} ">
+                    <p>${data.discount}%</p>
                 </div>
+
+                <div class="udsolgt ${data.soldout && "udsolgt_fr"}">
+                    <p>Udsolgt</p>
+                </div>
+
             </div>
 
             <div class="flex kurv">

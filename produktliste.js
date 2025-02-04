@@ -16,12 +16,21 @@ function showList(data) {
 
     .map(
       (product) =>
-        ` <div class="card">
+        ` <div class="card ${product.soldout && "udsolgt_f"}">
                 <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="">
                 <h3>${product.productdisplayname}</h3>
                 <h4>${product.articletype}|${product.brandname}</h4>
                 <p>${product.price},-</p>
                 <a href="produkt.html?id=${product.id}">Read more</a>
+
+
+ <div class="rabat ${product.discount && "rabat_fr"} ">
+                    <p>${product.discount}%</p>
+                </div>
+
+                <div class="udsolgt ${product.soldout && "udsolgt_fr"}">
+                    <p>Udsolgt</p>
+                </div>
             </div>`
     )
     .join("");
