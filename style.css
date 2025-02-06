@@ -12,7 +12,9 @@ img {
   align-self: stretch;
   object-fit: contain;
 }
-
+body {
+  background-color: black;
+}
 /******************* a tags ******************/
 
 .category_list_container a {
@@ -31,6 +33,7 @@ a {
   color: black;
   font-family: "Roboto Serif", serif;
   margin-bottom: 1rem;
+  color: white;
 }
 
 /***************** overskrifter og tekst ********************/
@@ -39,27 +42,32 @@ h1 {
   margin-left: 2rem;
   font-family: "Roboto";
   font-size: 60px;
-  color: black;
+  color: red;
 }
 h2 {
+  color: white;
   margin-top: 5rem;
   margin-left: 2rem;
   font-family: "Roboto";
   font-size: 40px;
   font-weight: 500;
+  margin-bottom: 1rem;
 }
 h3 {
   font-family: "Roboto Serif";
   margin-top: 1rem;
+  color: white;
 }
 
 h4 {
   font-family: "Roboto Serif";
   margin-block: 1rem;
+  color: white;
 }
 p {
   font-family: "Roboto Serif";
   font-weight: 100;
+  color: white;
 }
 
 .fashionrus {
@@ -116,9 +124,9 @@ p {
 /*********** udsolgt og rabat **********************/
 .rabat {
   position: relative;
-  top: -460.5px;
+  top: -450px;
   left: 0;
-  background-color: yellow;
+  background-color: red;
   color: black;
   width: 30%;
   text-align: center;
@@ -130,6 +138,41 @@ p {
 .rabat_fr {
   visibility: visible;
 }
+
+.rabatprodukt {
+  position: relative;
+  top: -10px;
+  left: 0;
+  background-color: red;
+  color: black;
+  width: 30%;
+  text-align: center;
+  padding: 2px;
+  max-height: 25px;
+  visibility: hidden;
+}
+
+.rabatprodukt_fr {
+  visibility: visible;
+}
+
+.udsolgtprodukt {
+  position: relative;
+  top: -10px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.364);
+  color: white;
+  width: 100%;
+  text-align: left;
+  font-size: 50px;
+  padding: 2px;
+  visibility: hidden;
+}
+
+.udsolgtprodukt_fr {
+  visibility: visible;
+}
+
 .udsolgt_f {
   filter: grayscale();
 }
@@ -152,7 +195,7 @@ p {
 
 /******************* grids og layout ********************/
 
-@media (min-width: 900px) {
+@media (min-width: 950px) {
   .produkt_liste_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -169,7 +212,7 @@ p {
   }
 }
 
-@media (min-width: 800px) and (max-width: 1200px) {
+@media (min-width: 950px) and (max-width: 1200px) {
   .productContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -184,13 +227,13 @@ p {
 @media (min-width: 1200px) {
   .productContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     margin-top: 2rem;
   }
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 950px) {
   .produkt_liste_container {
     display: grid;
     grid-template-columns: 1fr 1fr;

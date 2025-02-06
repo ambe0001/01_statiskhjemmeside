@@ -14,9 +14,18 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
   .then((data) => showProduct(data));
 
 function showProduct(data) {
-  productContainer.innerHTML = ` <img class="marginleft produktfoto" src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="">
+  productContainer.innerHTML = ` <img class="${data.soldout && "udsolgt_f"} marginleft produktfoto" src="https://kea-alt-del.dk/t7/images/webp/640/${productId}.webp" alt="">
+
 
             <div class="flex">
+
+               <div class="rabatprodukt ${data.discount && "rabatprodukt_fr"} ">
+                    <p>${data.discount}%</p>
+                </div>
+
+                <div class="udsolgtprodukt ${data.soldout && "udsolgtprodukt_fr"}">
+                    <p>Udsolgt</p>
+                </div>
                 <h2 class="produktinfo">Produkt information</h2>
                 <div>
                     <h3 class="specifik marginleft">Modelname</h3>
@@ -27,16 +36,6 @@ function showProduct(data) {
                     <p class="marginleft nummer">${data.id}</p>
                 </div>     
           
- <div class="rabat ${data.discount && "rabat_fr"} ">
-                    <p>${data.discount}%</p>
-                </div>
-
-                <div class="udsolgt ${data.soldout && "udsolgt_fr"}">
-                    <p>Udsolgt</p>
-                </div>
-
-            </div>
-
             <div class="flex kurv">
                 <h3>${data.productdisplayname}</h3>
                 <h4>${data.articletype}|${data.brandname}</h4>
